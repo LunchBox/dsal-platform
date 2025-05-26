@@ -59,6 +59,63 @@ const courses = computed(() => {
             </RouterLink>
           </div>
         </section>
+
+        <section class="my-4">
+          <div class="py-1 border-b mb-2">1+4 分類</div>
+          <div>
+            <div class="flex items-center gap-x-1">
+              <input type="checkbox" /> 綜合旅遊休閒
+            </div>
+            <div class="flex items-center gap-x-1">
+              <input type="checkbox" /> 會展商貿及文化體育
+            </div>
+            <div class="flex items-center gap-x-1">
+              <input type="checkbox" /> 現代金融
+            </div>
+            <div class="flex items-center gap-x-1">
+              <input type="checkbox" /> 大健康
+            </div>
+            <div class="flex items-center gap-x-1">
+              <input type="checkbox" /> 高新技術
+            </div>
+            <div class="flex items-center gap-x-1">
+              <input type="checkbox" /> 建築及工程維修
+            </div>
+            <div class="flex items-center gap-x-1">
+              <input type="checkbox" /> 其他
+            </div>
+          </div>
+        </section>
+
+        <section class="my-4">
+          <div class="py-1 border-b mb-2">月份</div>
+          <div>
+            <div class="flex items-center gap-x-1">
+              <input type="checkbox" /> 這個月
+            </div>
+            <div class="flex items-center gap-x-1">
+              <input type="checkbox" /> 下個月
+            </div>
+            <div class="flex items-center gap-x-1">
+              <input type="checkbox" /> 7月
+            </div>
+            <div class="flex items-center gap-x-1">
+              <input type="checkbox" /> 8月
+            </div>
+            <div class="flex items-center gap-x-1">
+              <input type="checkbox" /> ...
+            </div>
+          </div>
+        </section>
+
+        <section class="my-4">
+          <div class="py-1 border-b mb-2">...其他 filter</div>
+          <div>
+            <div class="flex items-center gap-x-1">
+              <input type="checkbox" /> ...
+            </div>
+          </div>
+        </section>
       </div>
       <div class="flex-1 py-4">
         <div class="mb-4">
