@@ -10,9 +10,9 @@ const route = useRoute();
 const query = computed(() => route.query?.tag);
 
 const courses = computed(() => {
-  const kw = String(query.value);
+  const kw = "" + query.value;
 
-  if (kw !== "") {
+  if (query.value) {
     return ALL_COURSES.filter(
       (c) => c.name.includes(kw) || c.tags?.includes(kw)
     );
