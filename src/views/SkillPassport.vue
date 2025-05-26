@@ -24,7 +24,7 @@ const query = computed(() => route.query?.tag);
   <div>
     <div class="py-4 border-b">My Skill Passport</div>
 
-    <div class="flex gap-x-4">
+    <div class="flex gap-x-8">
       <div class="py-4" style="width: 30%">
         <ul>
           <li>

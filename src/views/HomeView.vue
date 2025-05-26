@@ -16,7 +16,7 @@ import { RouterLink } from "vue-router";
       </div>
     </form>
 
-    <div class="my-4 flex flex-wrap gap-x-4">
+    <div class="my-4 flex flex-wrap gap-x-2">
       <div class="border w-24 h-24">
         <RouterLink
           to="/courses"

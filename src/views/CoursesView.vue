@@ -35,7 +35,7 @@ const courses = computed(() => {
       </form>
     </div>
 
-    <div class="flex gap-x-4">
+    <div class="flex gap-x-8">
       <div class="py-4" style="width: 30%">
         <section class="my-4">
           <div class="py-1 border-b mb-2">Filter By Skills</div>

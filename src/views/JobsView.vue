@@ -1,10 +1,25 @@
 <script setup lang="ts">
-import { RouterLink } from "vue-router";
+import { RouterLink, useRoute } from "vue-router";
 
 import { OCCUPATION } from "../data/occupation";
 import { SKILLS } from "../data/skills";
 
 import { JOBS } from "../data/jobs";
+import { computed } from "vue";
+
+const route = useRoute();
+
+const query = computed(() => route.query?.tag);
+
+const jobs = computed(() => {
+  const kw = "" + query.value;
+
+  if (query.value) {
+    return JOBS.filter((c) => c.name.includes(kw) || c.tags?.includes(kw));
+  } else {
+    return JOBS;
+  }
+});
 </script>
 <template>
   <div>
@@ -17,7 +32,7 @@ import { JOBS } from "../data/jobs";
       </form>
     </div>
 
-    <div class="flex gap-x-4">
+    <div class="flex gap-x-8">
       <div class="py-4" style="width: 30%">
         <div>Filter By</div>
 
@@ -136,9 +151,9 @@ import { JOBS } from "../data/jobs";
 
         <div>
           <div
-            v-for="(c, idx) in JOBS"
+            v-for="(c, idx) in jobs"
             :key="idx"
-            class="border mb-2 p-4 flex gap-x-4"
+            class="border mb-2 p-4 flex gap-x-8"
           >
             <div class="flex-1">
               <div>
@@ -186,7 +201,7 @@ import { JOBS } from "../data/jobs";
                 Location: <span>{{ c.location }}</span>
               </div>
 
-              <div>
+              <div class="mt-4">
                 <ul>
                   <li v-for="tag in c.tags">
                     <RouterLink :to="`/courses?tag=${tag}`">
