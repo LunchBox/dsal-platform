@@ -98,7 +98,7 @@ import { JOBS } from "./jobs";
                     </li>
                     <li>
                       <RouterLink to="/courses">
-                        酒店業職場英語 (旅遊學院)
+                        酒店業職場英語 (澳門旅遊大學)
                       </RouterLink>
                     </li>
                   </ul>

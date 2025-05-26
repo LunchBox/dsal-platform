@@ -53,7 +53,7 @@ const query = computed(() => route.query?.tag);
 
         <section class="mb-8">
           <h3 class="border-b py-1">我的技能點</h3>
-          <ul class="ml-8 my-2">
+          <ul class="ml-8 my-2 list-disc">
             <li v-for="(skill, idx) in MY_SKILLS" :key="idx">
               <RouterLink :to="`/jobs?tag=${skill}`"> #{{ skill }} </RouterLink>
             </li>
@@ -93,7 +93,7 @@ const query = computed(() => route.query?.tag);
           <h3 class="border-b py-1">已完成課程</h3>
           <ul class="ml-8 my-2 list-disc">
             <li class="mb-2">
-              <a href="#">影視製作機燈從業員培訓課程 </a>
+              <a href="#">影視製作機燈從業員培訓課程(勞工事務局)</a>
 
               <div class="ml-4">
                 Skill(s):
@@ -104,7 +104,7 @@ const query = computed(() => route.query?.tag);
             </li>
 
             <li class="mb-2">
-              <a href="#">AI輔助圖像設計課程 </a>
+              <a href="#">AI輔助圖像設計課程(澳門生產力暨科技轉移中心)</a>
 
               <div class="ml-4">
                 Skill(s):
@@ -113,7 +113,7 @@ const query = computed(() => route.query?.tag);
             </li>
 
             <li class="mb-2">
-              <a href="#">ComfyUI應用及商業攝影製作培訓課程 </a>
+              <a href="#">ComfyUI應用及商業攝影製作培訓課程(澳門旅遊大學)</a>
               <div class="ml-4">
                 Skill(s):
                 <RouterLink :to="`/jobs?tag=CCNA`">#商業攝影(初級)</RouterLink>
@@ -121,7 +121,7 @@ const query = computed(() => route.query?.tag);
             </li>
 
             <li class="mb-2">
-              <a href="#">酒店業職場英語-中階課程 </a>
+              <a href="#">酒店業職場英語-中階課程(澳門生產力暨科技轉移中心)</a>
               <div class="ml-4">
                 Skill(s):
                 <RouterLink :to="`/jobs?tag=酒店業職場英語(中級)`">
