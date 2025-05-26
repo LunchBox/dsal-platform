@@ -99,8 +99,8 @@ const query = computed(() => route.query?.tag);
                 </RouterLink>
               </li>
             </ul>
-            <div class="text-right">
-              <RouterLink :to="`/jobs`"> 查看更多 </RouterLink>
+            <div class="text-right text-sm">
+              <RouterLink :to="`/jobs_match`"> 查看更多 </RouterLink>
             </div>
           </div>
         </section>
