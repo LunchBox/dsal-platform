@@ -27,10 +27,20 @@ const courses = computed(() => {
       <div class="py-4" style="width: 30%">
         <ul>
           <li>
-            <RouterLink to="/skill_passport">Skill Tags</RouterLink>
+            <RouterLink to="/skill_passport" class="block py-2">
+              我的技能點（Skill Tags）
+            </RouterLink>
           </li>
           <li>
-            <RouterLink to="/skill_passport">Courses</RouterLink>
+            <RouterLink to="/skill_passport" class="block py-2">
+              已完成課程
+            </RouterLink>
+          </li>
+
+          <li>
+            <RouterLink to="/skill_passport" class="block py-2">
+              我的職業技能鑑定
+            </RouterLink>
           </li>
         </ul>
       </div>
@@ -39,11 +49,70 @@ const courses = computed(() => {
           <h3>??</h3>
           <p></p>
         </div>
-        <section>
-          <h3 class="border-b py-1">All My Skill Tags</h3>
+
+        <section class="mb-8">
+          <h3 class="border-b py-1">我的技能點</h3>
           <ul class="ml-8 my-2">
-            <li v-for="tag in ALL_TAGS">
-              <RouterLink :to="`/jobs?tag=${tag}`"> #{{ tag }} </RouterLink>
+            <li>
+              <RouterLink :to="`/jobs?tag=CCNA`">
+                #影視製作（初級）
+              </RouterLink>
+            </li>
+            <li>
+              <RouterLink :to="`/jobs?tag=CCNA`"> #圖像設計(初級) </RouterLink>
+            </li>
+            <li>
+              <RouterLink :to="`/jobs?tag=CCNA`"> #商業攝影(初級) </RouterLink>
+            </li>
+          </ul>
+        </section>
+
+        <section class="mb-8">
+          <h3 class="border-b py-1">已完成課程</h3>
+          <ul class="ml-8 my-2 list-disc">
+            <li>
+              <a href="#">影視製作機燈從業員培訓課程 </a>
+
+              <div class="ml-4">
+                Tags:
+                <RouterLink :to="`/jobs?tag=CCNA`">
+                  #影視製作（初級）
+                </RouterLink>
+              </div>
+            </li>
+
+            <li>
+              <a href="#">AI輔助圖像設計課程 </a>
+
+              <div class="ml-4">
+                Tags:
+                <RouterLink :to="`/jobs?tag=CCNA`">#圖像設計(初級)</RouterLink>
+              </div>
+            </li>
+            <li>
+              <a href="#">ComfyUI應用及商業攝影製作培訓課程 </a>
+              <div class="ml-4">
+                Tags:
+                <RouterLink :to="`/jobs?tag=CCNA`">#商業攝影(初級)</RouterLink>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 class="border-b py-1">我的職業技能鑑定</h3>
+          <ul class="ml-8 my-2 list-disc">
+            <li>
+              <a href="#">高級 茶藝師</a>
+            </li>
+            <li>
+              <a href="#">技師級 中式麵點師</a>
+            </li>
+            <li>
+              <a href="#">三級 CIEH食品安全</a>
+            </li>
+            <li>
+              <a href="#">高級 計算機程序設計員</a>
             </li>
           </ul>
         </section>

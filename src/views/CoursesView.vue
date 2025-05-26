@@ -11,7 +11,9 @@ const query = computed(() => route.query?.tag);
 
 const courses = computed(() => {
   if (query.value) {
-    return ALL_COURSES.filter((c) => c.name.includes(query.value));
+    return ALL_COURSES.filter(
+      (c) => c.name.includes(query.value) || c.tags?.includes(query.value)
+    );
   } else {
     return ALL_COURSES;
   }
@@ -63,6 +65,14 @@ const courses = computed(() => {
               <div class="text-xl my-2">
                 <RouterLink to="/courses">{{ c.name }}</RouterLink>
               </div>
+
+              <div v-if="c.tags" class="my-4">
+                技能點：
+                <RouterLink :to="`/courses?tag=${tag}`" v-for="tag in c.tags">
+                  #{{ tag }}
+                </RouterLink>
+              </div>
+
               <div>Upcoming Course Date: {{ c.start_date }}</div>
 
               <div>
