@@ -11,13 +11,13 @@ const route = useRoute();
 
 const query = computed(() => route.query?.tag);
 
-const courses = computed(() => {
-  if (query.value) {
-    return ALL_COURSES.filter((c) => c.name.includes(query.value));
-  } else {
-    return ALL_COURSES;
-  }
-});
+// const courses = computed(() => {
+//   if (query.value) {
+//     return ALL_COURSES.filter((c) => c.name.includes(query.value));
+//   } else {
+//     return ALL_COURSES;
+//   }
+// });
 </script>
 <template>
   <div>
