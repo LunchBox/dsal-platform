@@ -18,7 +18,7 @@ const jobs = computed(() => {
     <div class="py-4 border-b">Jobs Match My Skills</div>
     <div class="flex gap-x-8">
       <div class="py-4 pr-4" style="width: 30%">
-        <div class="my-4">
+        <section class="my-4">
           <div class="py-1 border-b mb-2">我的技能點</div>
           <div>
             <div
@@ -29,9 +29,9 @@ const jobs = computed(() => {
               <input type="checkbox" checked /> #{{ skill }}
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="my-4">
+        <section class="my-4">
           <div class="py-1 border-b mb-2">Location</div>
           <div>
             <div class="flex items-center gap-x-1">
@@ -50,9 +50,9 @@ const jobs = computed(() => {
               <input type="checkbox" /> 不限
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="my-4">
+        <section class="my-4">
           <div class="py-1 border-b mb-2">Shift</div>
           <div>
             <div class="flex items-center gap-x-1">
@@ -65,17 +65,39 @@ const jobs = computed(() => {
               <input type="checkbox" /> 輪班
             </div>
           </div>
-        </div>
+        </section>
+
+        <section class="my-4">
+          <div class="py-1 border-b mb-2">...其他 filter</div>
+          <div>
+            <div class="flex items-center gap-x-1">
+              <input type="checkbox" /> ...
+            </div>
+          </div>
+        </section>
       </div>
       <div class="flex-1 py-4">
         <div class="mb-4">
-          <h3>{{ Math.round(Math.random() * 1000) }} job(s)</h3>
-          <p>根據我的技能點查詢到的職位</p>
+          <h3>根據我的技能點查詢到的職位</h3>
         </div>
 
         <div>
-          <JobCard v-for="(job, idx) in jobs" :key="idx" :job="job"></JobCard>
+          <JobCard :job="JOBS[0]"></JobCard>
         </div>
+
+        <div class="mt-8 mb-4">
+          <h3>如下職位和我的技能樹相匹配，但需要你再進修 1 項技能：</h3>
+        </div>
+
+        <div>
+          <JobCard :job="JOBS[1]"></JobCard>
+        </div>
+
+        <div class="mt-8 mb-4">
+          <h3>如下職位和我的技能樹相匹配，但需要你再進修 2 項技能：</h3>
+        </div>
+
+        <div>...</div>
       </div>
     </div>
   </div>
