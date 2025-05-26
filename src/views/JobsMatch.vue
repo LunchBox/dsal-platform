@@ -3,6 +3,15 @@ import { RouterLink } from "vue-router";
 
 import { MY_SKILLS } from "../data/my_skills";
 import { JOBS } from "../data/jobs";
+
+import JobCard from "./JobCard.vue";
+import { computed } from "vue";
+
+const jobs = computed(() => {
+  return JOBS.filter((j) => {
+    return j.tags && j.tags.some((tag) => MY_SKILLS.includes(tag));
+  });
+});
 </script>
 <template>
   <div>
@@ -65,64 +74,7 @@ import { JOBS } from "../data/jobs";
         </div>
 
         <div>
-          <div v-for="(c, idx) in JOBS" :key="idx" class="border mb-2 p-4 flex">
-            <div class="flex-1">
-              <div>
-                <a href="#">{{ c.tp }}</a>
-              </div>
-              <div class="text-xl my-2">
-                <RouterLink to="/courses">{{ c.name }}</RouterLink>
-              </div>
-              <div>{{ c.work_hours }}</div>
-              <details>
-                <summary>Details</summary>
-
-                <div class="my-2">學歷要求: <br />{{ c.edu_req }}</div>
-
-                <div class="my-2">經驗要求: <br />{{ c.exp_req }}</div>
-                <div class="my-2">工作範圍: <br />{{ c.desc }}</div>
-
-                <div class="my-2">
-                  相關課程: <br />
-                  <ul class="ml-8 my-2 list-disc">
-                    <li>
-                      <RouterLink to="/courses">
-                        酒店業職場英語-中階課程 (勞工事務局)
-                      </RouterLink>
-                    </li>
-                    <li>
-                      <RouterLink to="/courses">
-                        酒店業職場英語 (澳門生產力暨科技轉移中心)
-                      </RouterLink>
-                    </li>
-                    <li>
-                      <RouterLink to="/courses">
-                        酒店業職場英語 (澳門旅遊大學)
-                      </RouterLink>
-                    </li>
-                  </ul>
-                </div>
-              </details>
-            </div>
-            <div style="width: 30%">
-              <div>
-                Salary: <span>{{ c.salary }}</span>
-              </div>
-              <div>
-                Location: <span>{{ c.location }}</span>
-              </div>
-
-              <div>
-                <ul>
-                  <li v-for="tag in c.tags">
-                    <RouterLink :to="`/courses?tag=${tag}`">
-                      #{{ tag }}
-                    </RouterLink>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <JobCard v-for="(job, idx) in jobs" :key="idx" :job="job"></JobCard>
         </div>
       </div>
     </div>
