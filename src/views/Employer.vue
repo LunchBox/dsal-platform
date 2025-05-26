@@ -15,23 +15,33 @@ const jobs = computed(() => JOBS.filter((j) => j.tp === company));
     <div class="flex gap-x-8">
       <div class="py-4" style="width: 30%">
         <section class="my-4">
+          <div>
+            <ul class="ml-8 my-2 list-disc">
+              <li>
+                <RouterLink :to="`/employer?status=`">Inbox</RouterLink>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="my-4">
           <div class="py-1 border-b mb-2">Filter By Status</div>
           <div>
             <ul class="ml-8 my-2 list-disc">
               <li>
-                <RouterLink :to="`/tp?status=`">草稿箱</RouterLink>
+                <RouterLink :to="`/employer?status=`">草稿箱</RouterLink>
               </li>
               <li>
-                <RouterLink :to="`/tp?status=`">待審批</RouterLink>
+                <RouterLink :to="`/employer?status=`">待審批</RouterLink>
               </li>
               <li>
-                <RouterLink :to="`/tp?status=`">已公佈</RouterLink>
+                <RouterLink :to="`/employer?status=`">已公佈</RouterLink>
               </li>
               <li>
-                <RouterLink :to="`/tp?status=`">已完成</RouterLink>
+                <RouterLink :to="`/employer?status=`">已完成</RouterLink>
               </li>
               <li>
-                <RouterLink :to="`/tp?status=`">...</RouterLink>
+                <RouterLink :to="`/employer?status=`">...</RouterLink>
               </li>
             </ul>
           </div>
@@ -42,10 +52,12 @@ const jobs = computed(() => JOBS.filter((j) => j.tp === company));
           <div>
             <ul class="ml-8 my-2 list-disc">
               <li v-for="skill in SKILLS.slice(0, 10)">
-                <RouterLink :to="`/tp?tag=${skill}`">#{{ skill }}</RouterLink>
+                <RouterLink :to="`/employer?tag=${skill}`">
+                  #{{ skill }}
+                </RouterLink>
               </li>
               <li>
-                <RouterLink :to="`/tp?tag=`">...</RouterLink>
+                <RouterLink :to="`/employer?tag=`">...</RouterLink>
               </li>
             </ul>
           </div>

@@ -60,9 +60,12 @@ const jobs = computed(() => {
 
         <section class="my-4">
           <div class="py-1 border-b mb-2">Filter By Skills</div>
+          <div class="text-xs my-4">
+            有職位的 skills 才會顯示，這裡只是舉例用
+          </div>
           <div>
             <ul class="ml-8 my-2 list-disc">
-              <li v-for="skill in SKILLS">
+              <li v-for="skill in SKILLS.slice(0, 20)">
                 <RouterLink :to="`/jobs?tag=${skill}`">
                   #{{ skill }}
                 </RouterLink>
@@ -71,6 +74,9 @@ const jobs = computed(() => {
                 <RouterLink :to="`/jobs?tag=`">...</RouterLink>
               </li>
             </ul>
+            <RouterLink :to="`/jobs?tag=`" class="text-xs">
+              &gt; View All Skills
+            </RouterLink>
           </div>
         </section>
 

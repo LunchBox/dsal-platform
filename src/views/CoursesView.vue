@@ -39,9 +39,12 @@ const courses = computed(() => {
       <div class="py-4" style="width: 30%">
         <section class="my-4">
           <div class="py-1 border-b mb-2">Filter By Skills</div>
+          <div class="text-xs my-4">
+            有課程的 skills 才會顯示，這裡只是舉例用
+          </div>
           <div>
             <ul class="ml-8 my-2 list-disc">
-              <li v-for="skill in SKILLS">
+              <li v-for="skill in SKILLS.slice(0, 10)">
                 <RouterLink :to="`/courses?tag=${skill}`">
                   #{{ skill }}
                 </RouterLink>
@@ -50,6 +53,9 @@ const courses = computed(() => {
                 <RouterLink :to="`/courses?tag=`">...</RouterLink>
               </li>
             </ul>
+            <RouterLink :to="`/courses?tag=`" class="text-xs">
+              &gt; View All Skills
+            </RouterLink>
           </div>
         </section>
       </div>
