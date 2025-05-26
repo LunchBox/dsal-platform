@@ -1,6 +1,7 @@
 export const COURSES = [
   {
     tp: "澳門勞工事務局",
+    code: "ABC-202505A",
     name: "美髮師(初級)考證課程",
     start_date: "26 Jun 25",
     duration: "124.5小時",
@@ -12,6 +13,7 @@ export const COURSES = [
   },
   {
     tp: "澳門勞工事務局",
+    code: "CM123-05-2025-AT",
     name: "美容師(初級)考證課程",
     start_date: "27 Jun 25",
     duration: "124.5小時",
@@ -23,6 +25,7 @@ export const COURSES = [
   },
   {
     tp: "澳門生產力暨科技轉移中心",
+    code: "CM123-05-2025-AT",
     name: "美甲技巧(初級班)",
     start_date: "18 Nov 25",
     duration: "17.5小時",
@@ -34,6 +37,7 @@ export const COURSES = [
   },
   {
     tp: "澳門勞工事務局",
+    code: "CM123-05-2025-AT",
     name: "酒店業職場英語-中階課程",
     start_date: "23 Sep 25",
     duration: "30小時",
@@ -45,6 +49,7 @@ export const COURSES = [
   },
   {
     tp: "澳門生產力暨科技轉移中心",
+    code: "CM123-05-2025-AT",
     name: "影視製作機燈從業員培訓課程",
     start_date: "23 Sep 25",
     duration: "30小時",
@@ -56,6 +61,7 @@ export const COURSES = [
   },
   {
     tp: "澳門勞工事務局",
+    code: "CM123-05-2025-AT",
     name: "家用空調深度清洗課程",
     start_date: "23 Sep 25",
     duration: "30小時",
@@ -66,6 +72,7 @@ export const COURSES = [
   },
   {
     tp: "澳門勞工事務局",
+    code: "CM123-05-2025-AT",
     name: "溝通技巧與正向態度課程",
     start_date: "23 Sep 25",
     duration: "30小時",
@@ -76,6 +83,7 @@ export const COURSES = [
   },
   {
     tp: "澳門生產力暨科技轉移中心",
+    code: "CM123-05-2025-AT",
     name: "CSA(Certified SOC Analyst)安全運營中心分析師認證課程",
     start_date: "23 Sep 25",
     duration: "30小時",

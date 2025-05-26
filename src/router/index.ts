@@ -13,7 +13,7 @@ const router = createRouter({
     {
       path: "/tp",
       name: "tp",
-      component: () => import("../views/TP_HomeView.vue"),
+      component: () => import("../views/TrainingProvider.vue"),
     },
 
     {

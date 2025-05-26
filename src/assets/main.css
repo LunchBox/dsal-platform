@@ -50,6 +50,6 @@ input {
 
   th,
   td {
-    @apply text-left border-b p-2 whitespace-nowrap;
+    @apply text-left border-b p-2 whitespace-nowrap text-sm;
   }
 }

@@ -11,6 +11,25 @@ import { SKILLS } from "@/data/skills";
     <div class="flex gap-x-8">
       <div class="py-4" style="width: 30%">
         <section class="my-4">
+          <div>
+            <ul class="ml-8 my-2 list-disc">
+              <li>
+                <RouterLink :to="`/tp?status=`">課程管理</RouterLink>
+              </li>
+              <li>
+                <RouterLink :to="`/tp?status=`"> 匯入學生成績(P3) </RouterLink>
+              </li>
+              <li>
+                <RouterLink :to="`/tp?status=`">學生管理(P3)</RouterLink>
+              </li>
+              <li>
+                <RouterLink :to="`/tp?status=`">...</RouterLink>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="my-4">
           <div class="py-1 border-b mb-2">Filter By Status</div>
           <div>
             <ul class="ml-8 my-2 list-disc">
@@ -69,7 +88,7 @@ import { SKILLS } from "@/data/skills";
             <thead>
               <tr>
                 <th></th>
-                <th>Title</th>
+                <th class="w-full">Title</th>
                 <th>Start Date</th>
                 <th>Status</th>
               </tr>
@@ -78,6 +97,7 @@ import { SKILLS } from "@/data/skills";
               <tr v-for="(c, idx) in COURSES" :key="c.name">
                 <td>{{ idx }}</td>
                 <td>
+                  <div class="text-xs mb-1">{{ c.code }}</div>
                   <div>
                     {{ c.name }}
                   </div>
