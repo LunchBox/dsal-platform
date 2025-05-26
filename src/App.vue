@@ -6,11 +6,15 @@ import { RouterLink, RouterView } from "vue-router";
   <div class="w-full h-full border px-4">
     <header class="h-[4rem] border-b flex items-center">
       <div class="wrapper">
-        <nav>
-          <h1 class="text-xl">DSAL Skills Platform</h1>
+        <nav class="flex items-center gap-x-2">
+          <h1 class="text-xl">
+            <RouterLink to="/">DSAL Skills Platform</RouterLink>
+          </h1>
 
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/about">About</RouterLink>
+          <div class="ml-auto">
+            <RouterLink to="/">Home</RouterLink>
+            <RouterLink to="/about">About</RouterLink>
+          </div>
         </nav>
       </div>
     </header>
@@ -21,8 +25,4 @@ import { RouterLink, RouterView } from "vue-router";
   </div>
 </template>
 
-<style scoped>
-nav {
-  @apply flex items-center;
-}
-</style>
+<style scoped></style>

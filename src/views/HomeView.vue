@@ -16,10 +16,41 @@ import { RouterLink } from "vue-router";
       </div>
     </form>
 
-    <div class="my-4">
-      <div class="border w-18 h-18 grid place-items-center text-center">
-        <RouterLink to="/courses">View Courses</RouterLink>
+    <div class="my-4 flex flex-wrap gap-4">
+      <div class="border w-24 h-24">
+        <RouterLink
+          to="/courses"
+          class="w-full h-full grid place-items-center text-center p-4"
+        >
+          View Courses
+        </RouterLink>
+      </div>
+      <div class="border w-24 h-24">
+        <RouterLink
+          to="/courses"
+          class="w-full h-full grid place-items-center text-center p-4"
+        >
+          View Jobs
+        </RouterLink>
+      </div>
+      <div class="border w-24 h-24">
+        <RouterLink
+          to="/courses"
+          class="w-full h-full grid place-items-center text-center p-4"
+        >
+          Skill Passport
+        </RouterLink>
+      </div>
+      <div class="border w-24 h-24">
+        <RouterLink
+          to="/courses"
+          class="w-full h-full grid place-items-center text-center p-4"
+        >
+          Jobs Match Me
+        </RouterLink>
       </div>
     </div>
   </main>
 </template>
+
+<style scoped></style>
