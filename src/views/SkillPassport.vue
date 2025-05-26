@@ -6,6 +6,7 @@ import { ALL_COURSES } from "./courses";
 import { ALL_TAGS } from "./tags";
 
 import { TRAINING_PROVIDERS } from "./training_providers";
+import { MY_SKILLS } from "./my_skills";
 
 const route = useRoute();
 
@@ -53,25 +54,8 @@ const query = computed(() => route.query?.tag);
         <section class="mb-8">
           <h3 class="border-b py-1">我的技能點</h3>
           <ul class="ml-8 my-2">
-            <li>
-              <RouterLink :to="`/jobs?tag=影視製作(初級)`">
-                #影視製作（初級）
-              </RouterLink>
-            </li>
-            <li>
-              <RouterLink :to="`/jobs?tag=圖像設計(初級)`">
-                #圖像設計(初級)
-              </RouterLink>
-            </li>
-            <li>
-              <RouterLink :to="`/jobs?tag=商業攝影(初級)`">
-                #商業攝影(初級)
-              </RouterLink>
-            </li>
-            <li>
-              <RouterLink :to="`/jobs?tag=酒店業職場英語(中級)`">
-                #酒店業職場英語(中級)
-              </RouterLink>
+            <li v-for="(skill, idx) in MY_SKILLS" :key="idx">
+              <RouterLink :to="`/jobs?tag=${skill}`"> #{{ skill }} </RouterLink>
             </li>
           </ul>
 

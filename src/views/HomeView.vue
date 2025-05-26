@@ -43,7 +43,7 @@ import { RouterLink } from "vue-router";
       </div>
       <div class="border w-24 h-24">
         <RouterLink
-          to="/jobs"
+          to="/jobs_match"
           class="w-full h-full grid place-items-center text-center p-4"
         >
           Jobs Match Me

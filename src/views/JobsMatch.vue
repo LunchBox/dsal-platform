@@ -1,90 +1,24 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
 
-import { OCCUPATION } from "./occupation";
-import { ALL_TAGS } from "./tags";
-
+import { MY_SKILLS } from "./my_skills";
 import { JOBS } from "./jobs";
 </script>
 <template>
   <div>
-    <div class="py-4 border-b">
-      <form class="flex justify-center">
-        <div class="inline-flex items-center py-2 gap-x-1">
-          <input type="text" class="w-[20rem]" placeholder="Search Jobs" />
-          <input type="submit" value="Search" />
-        </div>
-      </form>
-    </div>
-
     <div class="flex">
       <div class="py-4 pr-4" style="width: 30%">
         <div>Filter By</div>
 
-        <details>
-          <summary>Filter By 工種(155)</summary>
-          <div>
-            <ul class="ml-8 my-2">
-              <li v-for="(roles, cate) in OCCUPATION">
-                <details>
-                  <summary>{{ cate }}</summary>
-                  <div>
-                    <ul class="ml-8 my-2 list-disc">
-                      <li v-for="role in roles">
-                        <RouterLink :to="`/courses?tag=${role}`">
-                          {{ role }}
-                        </RouterLink>
-                      </li>
-                    </ul>
-                  </div>
-                </details>
-              </li>
-            </ul>
-          </div>
-        </details>
-
-        <details>
-          <summary>Filter By Skill Tags</summary>
-          <div>
-            <ul class="ml-8 my-2">
-              <li v-for="tag in ALL_TAGS">
-                <RouterLink :to="`/courses?tag=${tag}`">
-                  #{{ tag }}
-                </RouterLink>
-              </li>
-            </ul>
-          </div>
-        </details>
-
         <div class="my-4">
-          <div class="py-1 border-b mb-2">JOB LEVEL</div>
+          <div class="py-1 border-b mb-2">我的技能點</div>
           <div>
-            <div class="flex items-center gap-x-1">
-              <input type="checkbox" /> Senior Management
-            </div>
-            <div class="flex items-center gap-x-1">
-              <input type="checkbox" /> Middle Management
-            </div>
-            <div class="flex items-center gap-x-1">
-              <input type="checkbox" /> Manager
-            </div>
-            <div class="flex items-center gap-x-1">
-              <input type="checkbox" /> Profesional
-            </div>
-            <div class="flex items-center gap-x-1">
-              <input type="checkbox" /> Senior Executive
-            </div>
-            <div class="flex items-center gap-x-1">
-              <input type="checkbox" /> Executive
-            </div>
-            <div class="flex items-center gap-x-1">
-              <input type="checkbox" /> Junior Executive
-            </div>
-            <div class="flex items-center gap-x-1">
-              <input type="checkbox" /> Non-Executive
-            </div>
-            <div class="flex items-center gap-x-1">
-              <input type="checkbox" /> Fresh / Entry Level
+            <div
+              class="flex items-center gap-x-1"
+              v-for="(skill, idx) in MY_SKILLS"
+              :key="idx"
+            >
+              <input type="checkbox" checked /> #{{ skill }}
             </div>
           </div>
         </div>
@@ -128,7 +62,7 @@ import { JOBS } from "./jobs";
       <div class="flex-1 py-4">
         <div class="mb-4">
           <h3>{{ Math.round(Math.random() * 1000) }} job(s)</h3>
-          <p>空缺總數不包括休閒企業配對會中的空缺</p>
+          <p>根據我的技能點查詢到的職位</p>
         </div>
 
         <div>
