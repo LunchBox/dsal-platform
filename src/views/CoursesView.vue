@@ -3,6 +3,7 @@ import { computed } from "vue";
 import { RouterLink, useRoute } from "vue-router";
 
 import { ALL_COURSES } from "./courses";
+import { ALL_TAGS } from "./tags";
 
 const route = useRoute();
 
@@ -34,7 +35,19 @@ const courses = computed(() => {
 
     <div class="flex">
       <div class="py-4" style="width: 30%">
-        <div>Filter By</div>
+        <div>Filter By Skill Tags</div>
+
+        <div>
+          <div>
+            <ul>
+              <li v-for="tag in ALL_TAGS">
+                <RouterLink :to="`/courses?tag=${tag}`">
+                  #{{ tag }}
+                </RouterLink>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="flex-1 py-4">
         <div class="mb-4">
