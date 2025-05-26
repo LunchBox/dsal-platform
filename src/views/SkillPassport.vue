@@ -2,7 +2,7 @@
 import { computed } from "vue";
 import { RouterLink, useRoute } from "vue-router";
 
-import { ALL_COURSES } from "../data/courses";
+import { COURSES } from "../data/courses";
 import { SKILLS } from "../data/skills";
 
 import { TRAINING_PROVIDERS } from "./training_providers";
@@ -24,7 +24,7 @@ const query = computed(() => route.query?.tag);
   <div>
     <div class="py-4 border-b">My Skill Passport</div>
 
-    <div class="flex">
+    <div class="flex gap-x-4">
       <div class="py-4" style="width: 30%">
         <ul>
           <li>

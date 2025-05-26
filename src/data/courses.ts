@@ -1,4 +1,4 @@
-export const ALL_COURSES = [
+export const COURSES = [
   {
     tp: "澳門勞工事務局",
     name: "美髮師(初級)考證課程",
@@ -8,6 +8,7 @@ export const ALL_COURSES = [
     course_fee: "630.00",
     funding: "315.00",
     tags: ["美髮師(初級)"],
+    status: "草稿",
   },
   {
     tp: "澳門勞工事務局",
@@ -18,6 +19,7 @@ export const ALL_COURSES = [
     course_fee: "630.00",
     funding: "315.00",
     tags: ["美容師(初級)"],
+    status: "待審批",
   },
   {
     tp: "澳門勞工事務局",
@@ -28,6 +30,7 @@ export const ALL_COURSES = [
     course_fee: "Free",
     funding: "N/A",
     tags: ["酒店業職場英語(中級)"],
+    status: "已公佈",
   },
   {
     tp: "澳門勞工事務局",
@@ -38,6 +41,7 @@ export const ALL_COURSES = [
     course_fee: "Free",
     funding: "N/A",
     tags: ["影視製作（初級）"],
+    status: "已公佈",
   },
   {
     tp: "澳門勞工事務局",
@@ -47,6 +51,7 @@ export const ALL_COURSES = [
     type: "Full Time",
     course_fee: "Free",
     funding: "N/A",
+    status: "草稿",
   },
   {
     tp: "澳門勞工事務局",
@@ -56,6 +61,7 @@ export const ALL_COURSES = [
     type: "Full Time",
     course_fee: "Free",
     funding: "N/A",
+    status: "草稿",
   },
   {
     tp: "澳門勞工事務局",
@@ -65,5 +71,6 @@ export const ALL_COURSES = [
     type: "Full Time",
     course_fee: "Free",
     funding: "N/A",
+    status: "進行中",
   },
 ];

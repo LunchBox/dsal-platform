@@ -6,10 +6,9 @@ import { JOBS } from "../data/jobs";
 </script>
 <template>
   <div>
-    <div class="flex">
+    <div class="py-4 border-b">Jobs Match My Skills</div>
+    <div class="flex gap-x-4">
       <div class="py-4 pr-4" style="width: 30%">
-        <div>Filter By</div>
-
         <div class="my-4">
           <div class="py-1 border-b mb-2">我的技能點</div>
           <div>

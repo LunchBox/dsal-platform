@@ -47,4 +47,9 @@ input {
 
   #app {
   }
+
+  th,
+  td {
+    @apply text-left border-b p-2 whitespace-nowrap;
+  }
 }

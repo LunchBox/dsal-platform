@@ -2,7 +2,7 @@
 import { computed } from "vue";
 import { RouterLink, useRoute } from "vue-router";
 
-import { ALL_COURSES } from "../data/courses";
+import { COURSES } from "../data/courses";
 import { SKILLS } from "../data/skills";
 
 const route = useRoute();
@@ -13,11 +13,9 @@ const courses = computed(() => {
   const kw = "" + query.value;
 
   if (query.value) {
-    return ALL_COURSES.filter(
-      (c) => c.name.includes(kw) || c.tags?.includes(kw)
-    );
+    return COURSES.filter((c) => c.name.includes(kw) || c.tags?.includes(kw));
   } else {
-    return ALL_COURSES;
+    return COURSES;
   }
 });
 </script>
@@ -37,20 +35,23 @@ const courses = computed(() => {
       </form>
     </div>
 
-    <div class="flex">
+    <div class="flex gap-x-4">
       <div class="py-4" style="width: 30%">
-        <details>
-          <summary>Filter By Skill Tags</summary>
+        <section class="my-4">
+          <div class="py-1 border-b mb-2">Filter By Skills</div>
           <div>
-            <ul class="ml-8 my-2">
-              <li v-for="tag in SKILLS">
-                <RouterLink :to="`/courses?tag=${tag}`">
-                  #{{ tag }}
+            <ul class="ml-8 my-2 list-disc">
+              <li v-for="skill in SKILLS">
+                <RouterLink :to="`/courses?tag=${skill}`">
+                  #{{ skill }}
                 </RouterLink>
+              </li>
+              <li>
+                <RouterLink :to="`/courses?tag=`">...</RouterLink>
               </li>
             </ul>
           </div>
-        </details>
+        </section>
       </div>
       <div class="flex-1 py-4">
         <div class="mb-4">

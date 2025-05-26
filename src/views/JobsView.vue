@@ -17,8 +17,8 @@ import { JOBS } from "../data/jobs";
       </form>
     </div>
 
-    <div class="flex">
-      <div class="py-4 pr-4" style="width: 30%">
+    <div class="flex gap-x-4">
+      <div class="py-4" style="width: 30%">
         <div>Filter By</div>
 
         <details>
@@ -43,18 +43,21 @@ import { JOBS } from "../data/jobs";
           </div>
         </details>
 
-        <details>
-          <summary>Filter By Skill Tags</summary>
+        <section class="my-4">
+          <div class="py-1 border-b mb-2">Filter By Skills</div>
           <div>
-            <ul class="ml-8 my-2">
-              <li v-for="tag in SKILLS">
-                <RouterLink :to="`/courses?tag=${tag}`">
-                  #{{ tag }}
+            <ul class="ml-8 my-2 list-disc">
+              <li v-for="skill in SKILLS">
+                <RouterLink :to="`/jobs?tag=${skill}`">
+                  #{{ skill }}
                 </RouterLink>
+              </li>
+              <li>
+                <RouterLink :to="`/jobs?tag=`">...</RouterLink>
               </li>
             </ul>
           </div>
-        </details>
+        </section>
 
         <div class="my-4">
           <div class="py-1 border-b mb-2">JOB LEVEL</div>
@@ -132,7 +135,11 @@ import { JOBS } from "../data/jobs";
         </div>
 
         <div>
-          <div v-for="(c, idx) in JOBS" :key="idx" class="border mb-2 p-4 flex">
+          <div
+            v-for="(c, idx) in JOBS"
+            :key="idx"
+            class="border mb-2 p-4 flex gap-x-4"
+          >
             <div class="flex-1">
               <div>
                 <a href="#">{{ c.tp }}</a>
