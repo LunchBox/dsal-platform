@@ -42,7 +42,7 @@ input {
 
 @media (min-width: 1024px) {
   body {
-    @apply p-2;
+    @apply p-2 overflow-y-scroll;
   }
 
   #app {

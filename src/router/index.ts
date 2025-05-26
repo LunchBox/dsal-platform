@@ -23,6 +23,12 @@ const router = createRouter({
     },
 
     {
+      path: "/skill_passport",
+      name: "skill_passport",
+      component: () => import("../views/SkillPassport.vue"),
+    },
+
+    {
       path: "/about",
       name: "about",
       // route level code-splitting

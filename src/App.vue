@@ -10,11 +10,6 @@ import { RouterLink, RouterView } from "vue-router";
           <h1 class="text-xl">
             <RouterLink to="/">DSAL Skills Platform</RouterLink>
           </h1>
-
-          <div class="ml-auto">
-            <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/about">About</RouterLink>
-          </div>
         </nav>
       </div>
     </header>

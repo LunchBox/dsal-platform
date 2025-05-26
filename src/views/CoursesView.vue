@@ -35,11 +35,10 @@ const courses = computed(() => {
 
     <div class="flex">
       <div class="py-4" style="width: 30%">
-        <div>Filter By Skill Tags</div>
-
-        <div>
+        <details>
+          <summary>Filter By Skill Tags</summary>
           <div>
-            <ul>
+            <ul class="ml-8 my-2">
               <li v-for="tag in ALL_TAGS">
                 <RouterLink :to="`/courses?tag=${tag}`">
                   #{{ tag }}
@@ -47,7 +46,7 @@ const courses = computed(() => {
               </li>
             </ul>
           </div>
-        </div>
+        </details>
       </div>
       <div class="flex-1 py-4">
         <div class="mb-4">

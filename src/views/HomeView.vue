@@ -35,7 +35,7 @@ import { RouterLink } from "vue-router";
       </div>
       <div class="border w-24 h-24">
         <RouterLink
-          to="/courses"
+          to="/skill_passport"
           class="w-full h-full grid place-items-center text-center p-4"
         >
           Skill Passport
@@ -43,19 +43,20 @@ import { RouterLink } from "vue-router";
       </div>
       <div class="border w-24 h-24">
         <RouterLink
-          to="/courses"
+          to="/jobs"
           class="w-full h-full grid place-items-center text-center p-4"
         >
           Jobs Match Me
         </RouterLink>
       </div>
       <div class="border w-24 h-24">
-        <RouterLink
-          to="/courses"
+        <a
+          href="https://www3.dsal.gov.mo/courses/web/?language=zh-Hant#/course/course-list?categoryCode=dfpexam&category=%E8%81%B7%E6%A5%AD%E6%8A%80%E8%83%BD%E6%B8%AC%E8%A9%A6"
+          target="_blank"
           class="w-full h-full grid place-items-center text-center p-4"
         >
           職業技能測試
-        </RouterLink>
+        </a>
       </div>
     </div>
   </main>
