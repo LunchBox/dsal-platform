@@ -4,6 +4,7 @@ import { RouterLink, useRoute } from "vue-router";
 
 import { COURSES } from "../data/courses";
 import { SKILLS } from "../data/skills";
+import CourseCard from "./CourseCard.vue";
 
 const route = useRoute();
 
@@ -66,46 +67,11 @@ const courses = computed(() => {
         </div>
 
         <div>
-          <div v-for="c in courses" :key="c.name" class="border mb-2 p-4 flex">
-            <div class="flex-1">
-              <div>
-                <a href="#">{{ c.tp }}</a>
-              </div>
-              <div class="text-xl my-2">
-                <RouterLink to="/courses">{{ c.name }}</RouterLink>
-              </div>
-
-              <div v-if="c.tags" class="my-4">
-                技能點：
-                <RouterLink :to="`/courses?tag=${tag}`" v-for="tag in c.tags">
-                  #{{ tag }}
-                </RouterLink>
-              </div>
-
-              <div class="text-xs my-2">
-                Upcoming Course Date: {{ c.start_date }}
-              </div>
-
-              <div class="text-sm">
-                {{ c.duration }} &middot;
-                {{ c.type }}
-              </div>
-            </div>
-            <div style="width: 30%" class="text-sm">
-              <div>
-                Full Course Fee: <span>{{ c.course_fee }}</span>
-              </div>
-
-              <div>
-                Funding:
-                <span>{{ c.funding }}</span>
-              </div>
-
-              <div class="mt-2">
-                <input type="submit" value="報名" />
-              </div>
-            </div>
-          </div>
+          <CourseCard
+            v-for="course in courses"
+            :key="course.name"
+            :course="course"
+          ></CourseCard>
         </div>
       </div>
     </div>
