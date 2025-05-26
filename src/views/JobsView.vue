@@ -45,7 +45,7 @@ const jobs = [
                   <div>
                     <ul class="ml-8 my-2 list-disc">
                       <li v-for="role in roles">
-                        <RouterLink :to="`/courses?tag=${tag}`">
+                        <RouterLink :to="`/courses?tag=${role}`">
                           {{ role }}
                         </RouterLink>
                       </li>
@@ -146,7 +146,7 @@ const jobs = [
         </div>
 
         <div>
-          <div v-for="c in jobs" :key="c" class="border mb-2 p-4 flex">
+          <div v-for="(c, idx) in jobs" :key="idx" class="border mb-2 p-4 flex">
             <div class="flex-1">
               <div>
                 <a href="#">{{ c.tp }}</a>

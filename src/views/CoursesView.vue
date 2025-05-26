@@ -10,9 +10,11 @@ const route = useRoute();
 const query = computed(() => route.query?.tag);
 
 const courses = computed(() => {
-  if (query.value) {
+  const kw = String(query.value);
+
+  if (kw !== "") {
     return ALL_COURSES.filter(
-      (c) => c.name.includes(query.value) || c.tags?.includes(query.value)
+      (c) => c.name.includes(kw) || c.tags?.includes(kw)
     );
   } else {
     return ALL_COURSES;
@@ -57,7 +59,7 @@ const courses = computed(() => {
         </div>
 
         <div>
-          <div v-for="c in courses" :key="c" class="border mb-2 p-4 flex">
+          <div v-for="c in courses" :key="c.name" class="border mb-2 p-4 flex">
             <div class="flex-1">
               <div>
                 <a href="#">{{ c.tp }}</a>
