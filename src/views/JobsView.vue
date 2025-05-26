@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
 
-import { OCCUPATION } from "./occupation";
-import { ALL_TAGS } from "./tags";
+import { OCCUPATION } from "../data/occupation";
+import { SKILLS } from "../data/skills";
 
-import { JOBS } from "./jobs";
+import { JOBS } from "../data/jobs";
 </script>
 <template>
   <div>
@@ -47,7 +47,7 @@ import { JOBS } from "./jobs";
           <summary>Filter By Skill Tags</summary>
           <div>
             <ul class="ml-8 my-2">
-              <li v-for="tag in ALL_TAGS">
+              <li v-for="tag in SKILLS">
                 <RouterLink :to="`/courses?tag=${tag}`">
                   #{{ tag }}
                 </RouterLink>

@@ -1,4 +1,4 @@
-export const ALL_TAGS = [
+export const SKILLS = [
   "藝茶藝師(初級)",
   "茶藝師(高級)",
   "前廳服務員(高級)",

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
 
-import { MY_SKILLS } from "./my_skills";
-import { JOBS } from "./jobs";
+import { MY_SKILLS } from "../data/my_skills";
+import { JOBS } from "../data/jobs";
 </script>
 <template>
   <div>

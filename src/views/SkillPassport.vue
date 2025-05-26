@@ -2,11 +2,11 @@
 import { computed } from "vue";
 import { RouterLink, useRoute } from "vue-router";
 
-import { ALL_COURSES } from "./courses";
-import { ALL_TAGS } from "./tags";
+import { ALL_COURSES } from "../data/courses";
+import { SKILLS } from "../data/skills";
 
 import { TRAINING_PROVIDERS } from "./training_providers";
-import { MY_SKILLS } from "./my_skills";
+import { MY_SKILLS } from "../data/my_skills";
 
 const route = useRoute();
 

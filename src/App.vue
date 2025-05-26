@@ -16,7 +16,7 @@ import { RouterLink, RouterView } from "vue-router";
 
     <RouterView />
 
-    <footer class="border-t mt-4 min-h-[20rem]"></footer>
+    <footer class="border-t mt-4 min-h-[10rem]"></footer>
   </div>
 </template>
 

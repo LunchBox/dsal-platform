@@ -2,8 +2,8 @@
 import { computed } from "vue";
 import { RouterLink, useRoute } from "vue-router";
 
-import { ALL_COURSES } from "./courses";
-import { ALL_TAGS } from "./tags";
+import { ALL_COURSES } from "../data/courses";
+import { SKILLS } from "../data/skills";
 
 const route = useRoute();
 
@@ -43,7 +43,7 @@ const courses = computed(() => {
           <summary>Filter By Skill Tags</summary>
           <div>
             <ul class="ml-8 my-2">
-              <li v-for="tag in ALL_TAGS">
+              <li v-for="tag in SKILLS">
                 <RouterLink :to="`/courses?tag=${tag}`">
                   #{{ tag }}
                 </RouterLink>
@@ -75,14 +75,16 @@ const courses = computed(() => {
                 </RouterLink>
               </div>
 
-              <div>Upcoming Course Date: {{ c.start_date }}</div>
+              <div class="text-xs my-2">
+                Upcoming Course Date: {{ c.start_date }}
+              </div>
 
-              <div>
+              <div class="text-sm">
                 {{ c.duration }} &middot;
                 {{ c.type }}
               </div>
             </div>
-            <div style="width: 30%">
+            <div style="width: 30%" class="text-sm">
               <div>
                 Full Course Fee: <span>{{ c.course_fee }}</span>
               </div>
