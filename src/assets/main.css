@@ -1,8 +1,13 @@
 @import "tailwindcss";
-@import "./base.css";
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* @import "./base.css"; */
 
 #app {
-  max-width: 1280px;
+  max-width: 960px;
   margin: 0 auto;
   font-weight: normal;
 }
@@ -13,6 +18,28 @@ a,
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
   padding: 3px;
+}
+
+/* input {
+  @apply flex px-1 py-1;
+  @apply rounded-sm border border-input;
+  @apply bg-transparent shadow-sm transition-colors;
+  @apply text-[16px] md:text-sm;
+
+  @apply file:border-0 file:bg-transparent file:text-sm file:font-medium;
+  @apply placeholder:text-muted-foreground;
+  @apply focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring;
+  @apply disabled:cursor-not-allowed disabled:opacity-50;
+} */
+
+input {
+  @apply flex px-1 py-1;
+  @apply rounded-sm border;
+  @apply bg-transparent shadow-sm transition-colors;
+  @apply text-[16px] md:text-sm;
+
+  @apply file:border-0 file:bg-transparent file:text-sm file:font-medium;
+  @apply disabled:cursor-not-allowed disabled:opacity-50;
 }
 
 @media (hover: hover) {
