@@ -49,10 +49,10 @@ const jobs = computed(() => {
                 </RouterLink>
               </li>
               <li>
-                <RouterLink :to="`/jobs?tag=`">...</RouterLink>
+                <RouterLink :to="`/skills`">...</RouterLink>
               </li>
             </ul>
-            <RouterLink :to="`/jobs?tag=`" class="text-xs">
+            <RouterLink :to="`/skills`" class="text-xs">
               &gt; View All Skills
             </RouterLink>
           </div>

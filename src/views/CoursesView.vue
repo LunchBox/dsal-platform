@@ -51,10 +51,10 @@ const courses = computed(() => {
                 </RouterLink>
               </li>
               <li>
-                <RouterLink :to="`/courses?tag=`">...</RouterLink>
+                <RouterLink :to="`/skills`">...</RouterLink>
               </li>
             </ul>
-            <RouterLink :to="`/courses?tag=`" class="text-xs">
+            <RouterLink to="/skills" class="text-xs">
               &gt; View All Skills
             </RouterLink>
           </div>
