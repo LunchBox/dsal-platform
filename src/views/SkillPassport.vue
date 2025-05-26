@@ -5,7 +5,7 @@ import { RouterLink, useRoute } from "vue-router";
 import { COURSES } from "../data/courses";
 import { SKILLS } from "../data/skills";
 
-import { TRAINING_PROVIDERS } from "./training_providers";
+import { TRAINING_PROVIDERS } from "../data/training_providers";
 import { MY_SKILLS } from "../data/my_skills";
 
 import { Award } from "lucide-vue-next";
