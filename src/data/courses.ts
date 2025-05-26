@@ -18,7 +18,18 @@ export const COURSES = [
     type: "Full Time",
     course_fee: "630.00",
     funding: "315.00",
-    tags: ["美容師(初級)"],
+    tags: ["美容師(初級)", "護膚(基礎)", "美甲(基礎)"],
+    status: "待審批",
+  },
+  {
+    tp: "澳門生產力暨科技轉移中心",
+    name: "美甲技巧(初級班)",
+    start_date: "18 Nov 25",
+    duration: "17.5小時",
+    type: "Full Time",
+    course_fee: "1700.00",
+    funding: "不適用",
+    tags: ["美甲(基礎)"],
     status: "待審批",
   },
   {
@@ -33,7 +44,7 @@ export const COURSES = [
     status: "已公佈",
   },
   {
-    tp: "澳門勞工事務局",
+    tp: "澳門生產力暨科技轉移中心",
     name: "影視製作機燈從業員培訓課程",
     start_date: "23 Sep 25",
     duration: "30小時",
@@ -64,7 +75,7 @@ export const COURSES = [
     status: "草稿",
   },
   {
-    tp: "澳門勞工事務局",
+    tp: "澳門生產力暨科技轉移中心",
     name: "CSA(Certified SOC Analyst)安全運營中心分析師認證課程",
     start_date: "23 Sep 25",
     duration: "30小時",

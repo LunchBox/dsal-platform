@@ -94,6 +94,10 @@ const courses = computed(() => {
                 Funding:
                 <span>{{ c.funding }}</span>
               </div>
+
+              <div class="mt-2">
+                <input type="submit" value="報名" />
+              </div>
             </div>
           </div>
         </div>

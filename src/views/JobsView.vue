@@ -156,7 +156,7 @@ const jobs = computed(() => {
             class="border mb-2 p-4 flex gap-x-8"
           >
             <div class="flex-1">
-              <div>
+              <div class="text-sm">
                 <a href="#">{{ c.tp }}</a>
               </div>
               <div class="text-xl my-2">
@@ -166,28 +166,18 @@ const jobs = computed(() => {
               <details>
                 <summary>Details</summary>
 
-                <div class="my-2">學歷要求: <br />{{ c.edu_req }}</div>
+                <div class="my-4">學歷要求: <br />{{ c.edu_req }}</div>
 
-                <div class="my-2">經驗要求: <br />{{ c.exp_req }}</div>
-                <div class="my-2">工作範圍: <br />{{ c.desc }}</div>
+                <div class="my-4">經驗要求: <br />{{ c.exp_req }}</div>
+                <div class="my-4">工作範圍: <br />{{ c.desc }}</div>
 
-                <div class="my-2">
+                <div class="my-4" v-if="c.courses">
                   相關課程: <br />
                   <ul class="ml-8 my-2 list-disc">
-                    <li>
-                      <RouterLink to="/courses">
-                        酒店業職場英語-中階課程 (勞工事務局)
-                      </RouterLink>
-                    </li>
-                    <li>
-                      <RouterLink to="/courses">
-                        酒店業職場英語 (澳門生產力暨科技轉移中心)
-                      </RouterLink>
-                    </li>
-                    <li>
-                      <RouterLink to="/courses">
-                        酒店業職場英語 (澳門旅遊大學)
-                      </RouterLink>
+                    <li v-for="course in c.courses">
+                      <a href="#">
+                        {{ course }}
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -195,13 +185,18 @@ const jobs = computed(() => {
             </div>
             <div style="width: 30%">
               <div>
-                Salary: <span>{{ c.salary }}</span>
+                <span>{{ c.salary }}</span>
               </div>
-              <div>
+              <div class="my-2 text-sm">
                 Location: <span>{{ c.location }}</span>
               </div>
 
-              <div class="mt-4">
+              <div class="mt-2">
+                <input type="submit" value="應聘此職位" />
+              </div>
+
+              <div class="mt-4" v-if="c.tags">
+                <div class="text-sm mb-2">相關技能</div>
                 <ul>
                   <li v-for="tag in c.tags">
                     <RouterLink :to="`/courses?tag=${tag}`">

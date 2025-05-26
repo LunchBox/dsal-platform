@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
-import { COURSES } from "@/data/courses";
 import { SKILLS } from "@/data/skills";
+import { JOBS } from "@/data/jobs";
+import { computed } from "vue";
+
+const company = "新濠天地渡假村有限公司";
+const jobs = computed(() => JOBS.filter((j) => j.tp === company));
 </script>
 
 <template>
   <main>
-    <div class="py-4 border-b">澳門生產力暨科技轉移中心</div>
+    <div class="py-4 border-b">{{ company }}</div>
 
     <div class="flex gap-x-8">
       <div class="py-4" style="width: 30%">
@@ -51,17 +55,13 @@ import { SKILLS } from "@/data/skills";
         <div>
           <form>
             <div class="flex items-center py-2 gap-x-1">
-              <input
-                type="text"
-                class="w-[20rem]"
-                placeholder="search courses"
-              />
+              <input type="text" class="w-[20rem]" placeholder="Search Jobs" />
               <input type="submit" value="Search" />
             </div>
           </form>
         </div>
         <div class="mb-4">
-          <h3>課程管理 {{ Math.round(Math.random() * 1000) }} course(s)</h3>
+          <h3>職位招聘 {{ Math.round(Math.random() * 1000) }} positions(s)</h3>
         </div>
 
         <div>
@@ -69,13 +69,13 @@ import { SKILLS } from "@/data/skills";
             <thead>
               <tr>
                 <th></th>
-                <th>Title</th>
-                <th>Start Date</th>
+                <th class="w-full">Title</th>
+                <th>Applications</th>
                 <th>Status</th>
               </tr>
             </thead>
             <tbody>
-              <tr v-for="(c, idx) in COURSES" :key="c.name">
+              <tr v-for="(c, idx) in jobs" :key="c.name">
                 <td>{{ idx }}</td>
                 <td>
                   <div>
@@ -83,7 +83,7 @@ import { SKILLS } from "@/data/skills";
                   </div>
                 </td>
                 <td>
-                  {{ c.start_date }}
+                  {{ Math.round(Math.random() * 10) }}
                 </td>
                 <td>
                   {{ c.status }}

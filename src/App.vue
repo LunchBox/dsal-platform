@@ -19,7 +19,8 @@ import { RouterLink, RouterView } from "vue-router";
     <footer class="border-t mt-[20rem] pb-4 pt-4 text-sm">
       <div>
         收集個人資料聲明 | 使用條款及免責聲明 | 網站地圖 | 聯絡我們 |
-        <RouterLink to="/tp">Training Provider</RouterLink>
+        <RouterLink to="/tp">培訓機構</RouterLink> |
+        <RouterLink to="/employer">僱主</RouterLink>
       </div>
       <div class="mb-8">最後修訂日期：2025-05-26</div>
       <div>2016 澳門特別行政區政府勞工事務局版權所有</div>
