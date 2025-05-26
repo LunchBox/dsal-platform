@@ -10,7 +10,7 @@ const jobs = [
     name: "酒店顧客聯絡副主管",
     salary: "$25,500/按月",
     location: "氹仔",
-    tags: ["廣東話", "普通話", "酒店業職場英語(中級)"],
+    tags: ["酒店業職場英語(中級)"],
     work_hours:
       "業務時間:24小時,需輪班工作,每週工作5天,每日工作9.5小時,休息時間(小時):0.5",
     edu_req: "高等教育,廣東話良好;普通話良好;英語良好",
@@ -158,10 +158,31 @@ const jobs = [
               <details>
                 <summary>Details</summary>
 
-                <div>{{ c.edu_req }}</div>
+                <div class="my-2">學歷要求: <br />{{ c.edu_req }}</div>
 
-                <div>{{ c.exp_req }}</div>
-                <div>{{ c.desc }}</div>
+                <div class="my-2">經驗要求: <br />{{ c.exp_req }}</div>
+                <div class="my-2">工作範圍: <br />{{ c.desc }}</div>
+
+                <div class="my-2">
+                  相關課程: <br />
+                  <ul class="ml-8 my-2 list-disc">
+                    <li>
+                      <RouterLink to="/courses">
+                        酒店業職場英語-中階課程 (勞工事務局)
+                      </RouterLink>
+                    </li>
+                    <li>
+                      <RouterLink to="/courses">
+                        酒店業職場英語 (澳門生產力暨科技轉移中心)
+                      </RouterLink>
+                    </li>
+                    <li>
+                      <RouterLink to="/courses">
+                        酒店業職場英語 (旅遊學院)
+                      </RouterLink>
+                    </li>
+                  </ul>
+                </div>
               </details>
             </div>
             <div style="width: 30%">
