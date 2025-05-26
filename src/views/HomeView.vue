@@ -27,7 +27,7 @@ import { RouterLink } from "vue-router";
       </div>
       <div class="border w-24 h-24">
         <RouterLink
-          to="/courses"
+          to="/jobs"
           class="w-full h-full grid place-items-center text-center p-4"
         >
           View Jobs
@@ -47,6 +47,14 @@ import { RouterLink } from "vue-router";
           class="w-full h-full grid place-items-center text-center p-4"
         >
           Jobs Match Me
+        </RouterLink>
+      </div>
+      <div class="border w-24 h-24">
+        <RouterLink
+          to="/courses"
+          class="w-full h-full grid place-items-center text-center p-4"
+        >
+          職業技能測試
         </RouterLink>
       </div>
     </div>

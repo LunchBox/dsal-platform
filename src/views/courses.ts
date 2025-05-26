@@ -1,0 +1,20 @@
+export const ALL_COURSES = [
+  {
+    tp: "澳門勞工事務局",
+    name: "美髮師(初級)考證課程",
+    start_date: "26 Jun 25",
+    duration: "124.5小時",
+    type: "Full Time",
+    course_fee: "630.00",
+    funding: "315.00",
+  },
+  {
+    tp: "澳門勞工事務局",
+    name: "酒店業職場英語-中階課程",
+    start_date: "23 Sep 25",
+    duration: "30小時",
+    type: "Full Time",
+    course_fee: "Free",
+    funding: "N/A",
+  },
+];
