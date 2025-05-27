@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 defineProps(["job"]);
+
+const match = Math.round(Math.random() * 10);
 </script>
 <template>
   <div class="border mb-2 p-4 flex gap-x-8">
@@ -32,7 +34,15 @@ defineProps(["job"]);
       </details>
 
       <div class="italic text-sm mt-2">
-        {{ Math.round(Math.random() * 10000) / 100 }}% skills matched
+        skills matched:
+
+        <div class="flex gap-1 my-2">
+          <div
+            class="h-[4px] w-[2rem] bg-gray-200"
+            :class="{ 'bg-gray-400': i <= match }"
+            v-for="i in 10"
+          ></div>
+        </div>
       </div>
     </div>
     <div style="width: 30%">
