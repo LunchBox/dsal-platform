@@ -24,6 +24,8 @@ const job = computed(() => JOBS.find((j) => "" + j.id === itemId.value));
 //     return JOBS;
 //   }
 // });
+
+const match = Math.round(Math.random() * 10);
 </script>
 <template>
   <div>
