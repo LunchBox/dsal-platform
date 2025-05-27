@@ -21,6 +21,25 @@ const query = computed(() => route.query?.tag);
 //     return ALL_COURSES;
 //   }
 // });
+
+const tags = [
+  "CSS",
+  "Scalability",
+  "HTML",
+  "REST",
+  "MySQL",
+  "Agile",
+  "JavaScript",
+  "SQL",
+  "Python",
+  "Angular",
+  "Docker",
+  "Web Applications",
+  "Java",
+  "API",
+  "Databases",
+  "Software Development",
+];
 </script>
 <template>
   <div>
@@ -148,7 +167,7 @@ const query = computed(() => route.query?.tag);
           </ul>
         </section>
 
-        <section>
+        <section class="mb-8">
           <h3 class="border-b py-1">我的職業技能鑑定</h3>
           <ul class="ml-8 my-2 list-disc">
             <li>
@@ -164,6 +183,25 @@ const query = computed(() => route.query?.tag);
               <a href="#">高級 計算機程序設計員</a>
             </li>
           </ul>
+        </section>
+
+        <section class="mb-8">
+          <h3 class="border-b py-1">我的技能標籤（方案2）</h3>
+
+          <div class="py-4">
+            <span
+              v-for="tag in tags"
+              class="rounded-full border whitespace-nowrap inline-block m-1 px-2 text-sm"
+            >
+              #{{ tag }}
+            </span>
+
+            <span
+              class="rounded-full border whitespace-nowrap inline-block m-0.5 px-2 text-sm"
+            >
+              + 標籤
+            </span>
+          </div>
         </section>
       </div>
     </div>
