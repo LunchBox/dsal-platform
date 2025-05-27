@@ -8,7 +8,7 @@ defineProps(["course"]);
         <a href="#">{{ course.tp }}</a>
       </div>
       <div class="text-xl my-2">
-        <RouterLink to="/courses">{{ course.name }}</RouterLink>
+        <RouterLink :to="`/courses/${course.id}`">{{ course.name }}</RouterLink>
       </div>
 
       <div v-if="course.tags" class="my-4">
