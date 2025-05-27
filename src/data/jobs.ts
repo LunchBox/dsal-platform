@@ -1,5 +1,6 @@
 export const JOBS = [
   {
+    id: 1,
     tp: "COD Resorts Limitada",
     name: "酒店顧客聯絡副主管",
     salary: "$25,500/按月",
@@ -19,6 +20,7 @@ export const JOBS = [
     status: "已公佈",
   },
   {
+    id: 2,
     tp: "COD Resorts Limitada",
     name: "酒店顧客聯絡主管",
     salary: "$35,500/按月",
@@ -38,6 +40,7 @@ export const JOBS = [
     status: "已公佈",
   },
   {
+    id: 3,
     tp: "新濠天地渡假村有限公司",
     name: "禮賓管家服務主任",
     salary: "$22,000-$23,000/按月",
@@ -50,6 +53,7 @@ export const JOBS = [
     status: "已公佈",
   },
   {
+    id: 4,
     tp: "新銀河娛樂2006有限公司",
     name: "服務員 - 市場服務 (Marketing Attendant)",
     salary: "$20,000/按月,另有佣金",
@@ -64,6 +68,7 @@ export const JOBS = [
     status: "已公佈",
   },
   {
+    id: 5,
     tp: "緣美美容有限公司",
     name: "美容師",
     salary: "$12,000-$12,500/按月",
@@ -77,6 +82,7 @@ export const JOBS = [
     status: "已公佈",
   },
   {
+    id: 6,
     tp: "SPEC",
     name: "高級髮型設計師",
     salary: "$20,000/按月,另有佣金",
@@ -90,6 +96,7 @@ export const JOBS = [
     status: "已公佈",
   },
   {
+    id: 7,
     tp: "全日髮型屋",
     name: "理髮師",
     salary: "$12,000-$18,000/按月,另有佣金",

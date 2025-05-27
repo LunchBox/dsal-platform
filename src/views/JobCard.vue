@@ -10,7 +10,7 @@ const match = Math.round(Math.random() * 10);
         <a href="#">{{ job.tp }}</a>
       </div>
       <div class="text-xl my-2">
-        <RouterLink to="/courses">{{ job.name }}</RouterLink>
+        <RouterLink :to="`/jobs/${job.id}`">{{ job.name }}</RouterLink>
       </div>
       <div>{{ job.work_hours }}</div>
       <details>
