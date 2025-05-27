@@ -30,6 +30,10 @@ defineProps(["job"]);
           </ul>
         </div>
       </details>
+
+      <div class="italic text-sm text-green-500 mt-2">
+        {{ Math.round(Math.random() * 10000) / 100 }}% skills matched
+      </div>
     </div>
     <div style="width: 30%">
       <div>
